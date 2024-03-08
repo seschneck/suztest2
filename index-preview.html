@@ -513,7 +513,7 @@ Table&nbsp;1: Recent historic eruptions on La Palma
 <div id="fig-1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="index_files/figure-html/notebooks-fig1-fig-1-output-1.png" class="lightbox" data-glightbox="description: .lightbox-desc-1" data-gallery="quarto-lightbox-gallery-1"><img src="index_files/figure-html/notebooks-fig1-fig-1-output-1.png" width="672" height="480" class="figure-img"></a>
+<a href="index_files/figure-html/notebooks-fig1-fig-1-output-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" data-glightbox="description: .lightbox-desc-1"><img src="index_files/figure-html/notebooks-fig1-fig-1-output-1.png" width="672" height="480" class="figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: A Basic Barplot Figure
@@ -527,7 +527,7 @@ Figure&nbsp;1: A Basic Barplot Figure
 <div id="fig-map" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/la-palma-map.png" class="lightbox" data-glightbox="description: .lightbox-desc-2" data-gallery="quarto-lightbox-gallery-2"><img src="images/la-palma-map.png" class="img-fluid figure-img"></a>
+<a href="images/la-palma-map.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" data-glightbox="description: .lightbox-desc-2"><img src="images/la-palma-map.png" class="img-fluid figure-img"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Map of La Palma
@@ -545,10 +545,7 @@ Figure&nbsp;2: Map of La Palma
 </ul>
 <p>Article references are stored in a .bib file using betterbibtex (BBT) format. We create these references in Zotero collections.</p>
 <p>Although we don’t do this regularly I think, if needed you can</p>
-<ul>
-<li>reference other sections in the paper (e.g., Methods are described in <a href="#sec-methods" class="quarto-xref">Section&nbsp;2</a>)</li>
-<li>reference figures elsewhere using the @ symbol. Here is a reference to <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a></li>
-</ul>
+<p>Issue with Typst breaking on <a href="https://github.com/typst/typst/issues/1142">“unnumbered references”</a> <!-- - reference other sections in the paper (e.g., Methods are described in @sec-methods) --> - reference figures elsewhere using the @ symbol. Here is a reference to <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a></p>
 </section>
 </section>
 <section id="sec-methods" class="level2">
@@ -1001,7 +998,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
