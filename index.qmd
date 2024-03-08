@@ -29,7 +29,7 @@ key-points:
   - Take away point 1 
   - Take away point 2
 date: last-modified
-bibliography: references.bib
+# bibliography: references.bib
 citation:
   container-title: Journal of Important Findings 
 number-sections: false 
@@ -138,7 +138,6 @@ NOTES:
 
 ## Discussion {#sec-discussion}
 
-## References {.unnumbered}
-
-::: {#refs}
-:::
+```{=typst} 
+#bibliography("references.bib", title: "References", style: "apa")
+```

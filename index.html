@@ -24,27 +24,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -109,7 +89,6 @@ window.Quarto = {
 <meta name="citation_online_date" content="2024-03-08">
 <meta name="citation_language" content="en">
 <meta name="citation_journal_title" content="Journal of Important Findings">
-<meta name="citation_reference" content="citation_title=Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands);,citation_author=José Marrero;,citation_author=Alicia García;,citation_author=Manuel Berrocoso;,citation_author=Ángeles Llinares;,citation_author=Antonio Rodríguez-Losada;,citation_author=R. Ortiz;,citation_publication_date=2019-07;,citation_cover_date=2019-07;,citation_year=2019;,citation_doi=10.1186/s13617-019-0085-5;,citation_volume=8;,citation_journal_title=Journal of Applied Volcanology;">
 </head>
 
 <body>
@@ -195,7 +174,6 @@ window.Quarto = {
   <li><a href="#sec-methods" id="toc-sec-methods" class="nav-link" data-scroll-target="#sec-methods">Methods</a></li>
   <li><a href="#sec-results" id="toc-sec-results" class="nav-link" data-scroll-target="#sec-results">Results</a></li>
   <li><a href="#sec-discussion" id="toc-sec-discussion" class="nav-link" data-scroll-target="#sec-discussion">Discussion</a></li>
-  <li><a href="#references-1" id="toc-references-1" class="nav-link" data-scroll-target="#references-1">References</a></li>
   </ul>
 </nav>
 </div>
@@ -439,9 +417,9 @@ Figure&nbsp;2: Map of La Palma
 <h3 class="anchored" data-anchor-id="references">References</h3>
 <p>We can use cite relevant research in multiple formats. The two most common are:</p>
 <ul>
-<li><span class="citation" data-cites="marrero2019">Marrero et al. (<a href="#ref-marrero2019" role="doc-biblioref">2019</a>)</span> concluded something.<br>
+<li><span class="citation" data-cites="marrero2019">@marrero2019</span> concluded something.<br>
 </li>
-<li>These are the conclusions<span class="citation" data-cites="marrero2019">(<a href="#ref-marrero2019" role="doc-biblioref">Marrero et al. 2019</a>)</span>.</li>
+<li>These are the conclusions<span class="citation" data-cites="marrero2019">[@marrero2019]</span>.</li>
 </ul>
 <p>Article references are stored in a .bib file using betterbibtex (BBT) format. We create these references in Zotero collections.</p>
 <p>Although we don’t do this regularly I think, if needed you can</p>
@@ -464,14 +442,6 @@ Figure&nbsp;2: Map of La Palma
 </section>
 <section id="sec-discussion" class="level2">
 <h2 class="anchored" data-anchor-id="sec-discussion">Discussion</h2>
-</section>
-<section id="references-1" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="references-1">References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-marrero2019" class="csl-entry" role="listitem">
-Marrero, José, Alicia García, Manuel Berrocoso, Ángeles Llinares, Antonio Rodríguez-Losada, and R. Ortiz. 2019. <span>“Strategies for the Development of Volcanic Hazard Maps in Monogenetic Volcanic Fields: The Example of <span>La</span> <span>Palma</span> (<span>Canary</span> <span>Islands</span>).”</span> <em>Journal of Applied Volcanology</em> 8 (July). <a href="https://doi.org/10.1186/s13617-019-0085-5">https://doi.org/10.1186/s13617-019-0085-5</a>.
-</div>
-</div>
 <div class="hidden" aria-hidden="true">
 <span class="glightbox-desc lightbox-desc-1">Figure&nbsp;1: A Basic Barplot Figure</span>
 <span class="glightbox-desc lightbox-desc-2">Figure&nbsp;2: Map of La Palma</span>
@@ -879,7 +849,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
