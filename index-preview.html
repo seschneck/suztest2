@@ -276,7 +276,7 @@
     </div>
 
     <div class="quarto-other-links-text-target">
-    </div>  </div>
+    <div class="quarto-code-links"><div class="quarto-title-meta-heading">Code Links</div><div class="quarto-title-meta-contents"><span><a href="https://github.com/seschneck/suztest2/" target="_blank"><i class="bi bi-github"></i>GitHub Repo</a></span></div></div></div>  </div>
 </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
 <div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   <nav id="TOC" role="doc-toc" class="toc-active">
@@ -545,7 +545,8 @@ Figure&nbsp;2: Map of La Palma
 </ul>
 <p>Article references are stored in a .bib file using betterbibtex (BBT) format. We create these references in Zotero collections.</p>
 <p>Although we don’t do this regularly I think, if needed you can</p>
-<p>Issue with Typst breaking on <a href="https://github.com/typst/typst/issues/1142">“unnumbered references”</a> <!-- - reference other sections in the paper (e.g., Methods are described in @sec-methods) --> - reference figures elsewhere using the @ symbol. Here is a reference to <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a></p>
+<p>Issue with Typst breaking on <a href="https://github.com/typst/typst/issues/1142">“unnumbered references”</a></p>
+<p>Change number-sections: in YAML to TRUE to fix this (although that causes unwanted numbering!) <!-- - reference other sections in the paper (e.g., Methods are described in @sec-methods) --> - reference figures elsewhere using the @ symbol. Here is a reference to <a href="#fig-1" class="quarto-xref">Figure&nbsp;1</a></p>
 </section>
 </section>
 <section id="sec-methods" class="level2">
@@ -998,7 +999,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+</script>  </div> <!-- /content -->  <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false,"selector":".lightbox"});
 window.onload = () => {
   lightboxQuarto.on('slide_before_load', (data) => {
     const { slideIndex, slideNode, slideConfig, player, trigger } = data;
