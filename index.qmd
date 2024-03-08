@@ -29,7 +29,7 @@ key-points:
   - Take away point 1 
   - Take away point 2
 date: last-modified
-# bibliography: references.bib
+bibliography: references.bib
 citation:
   container-title: Journal of Important Findings 
 number-sections: false 
@@ -138,6 +138,16 @@ NOTES:
 
 ## Discussion {#sec-discussion}
 
-```{=typst} 
-#bibliography("references.bib", title: "References", style: "apa")
-```
+## References {.unnumbered}
+
+::: {#refs}
+:::
+
+
+<!-- Note: Ref section still doesn't seem APA style. Typst will in teh future support standalone refs. In the meantime, this works but ONLY in the typst APA output. You also have to comment out the bibliography: line in the YAML for it to work. -->
+
+<!-- ```{=typst}  -->
+<!-- #bibliography("references.bib", title: "References", style: "apa") -->
+<!-- ``` -->
+
+
