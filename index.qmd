@@ -108,6 +108,8 @@ Article references are stored in a .bib file using betterbibtex (BBT) format.  W
 Although we don't do this regularly I think, if needed you can 
 
 Issue with Typst breaking on ["unnumbered references"](https://github.com/typst/typst/issues/1142)
+
+Change number-sections: in YAML to TRUE to fix this (although that causes unwanted numbering!)
 <!-- - reference other sections in the paper (e.g., Methods are described in @sec-methods) -->
 - reference figures elsewhere using the @ symbol.   Here is a reference to @fig-1
 

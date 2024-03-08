@@ -14,6 +14,7 @@ format:
   docx: default
 #  jats: default
   # agu-pdf: default
-  apaish-manuscript-typst: default
-  # apaish-document-typst: default
-  # apaish-journal-typst: default
+# Note only one PDF or typst output can be specified at a time
+  apaish-manuscript-typst: default # one column, double spaced for submission to a journal
+  # apaish-document-typst: default # more formatted, LaTex style, still one column
+  # apaish-journal-typst: default # two column, extra formatted, like you might use for a preprint
