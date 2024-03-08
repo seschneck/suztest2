@@ -107,7 +107,8 @@ Article references are stored in a .bib file using betterbibtex (BBT) format.  W
 
 Although we don't do this regularly I think, if needed you can 
 
-- reference other sections in the paper (e.g., Methods are described in @sec-methods)
+Issue with Typst breaking on ["unnumbered references"](https://github.com/typst/typst/issues/1142)
+<!-- - reference other sections in the paper (e.g., Methods are described in @sec-methods) -->
 - reference figures elsewhere using the @ symbol.   Here is a reference to @fig-1
 
 

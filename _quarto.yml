@@ -13,7 +13,7 @@ format:
       hypothesis: true
   docx: default
 #  jats: default
-  agu-pdf: default
+  # agu-pdf: default
   apaish-manuscript-typst: default
-  apaish-document-typst: default
-  apaish-journal-typst: default
+  # apaish-document-typst: default
+  # apaish-journal-typst: default
