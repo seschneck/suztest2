@@ -2,7 +2,8 @@ project:
   type: manuscript
 
 notebook-links: false #not currently available to disable by format. Ideally we want links in HTML, not in doc/pdf.
- 
+code-links: repo
+
 execute:
   freeze: auto
 

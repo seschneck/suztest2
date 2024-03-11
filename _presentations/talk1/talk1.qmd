@@ -15,15 +15,17 @@ format:
     css: arc.css
   
 fig-cap-location: top
+execute:
+  freeze: auto
 ---
 
-## Need is High and Unmet
+## Need is High and Unmet 1
 
 
 - In 2019, [52 million]{style="color: red;"} Americans had an active mental illness
   - More than half did not receive any [treatment]{style="color: red;"}
 
-
+{{< embed ../../notebooks/fig1.qmd#fig-1 >}}
 
 ::: {.notes}
 We have a mental health crisis in the U.S. and it is a crisis of **unmet** high need because our delivery of mental healthcare is deeply flawed. 

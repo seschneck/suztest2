@@ -142,3 +142,12 @@ NOTES:
 
 ::: {#refs}
 :::
+
+
+<!-- Note: Ref section still doesn't seem APA style. Typst will in teh future support standalone refs. In the meantime, this works but ONLY in the typst APA output. You also have to comment out the bibliography: line in the YAML for it to work. -->
+
+<!-- ```{=typst}  -->
+<!-- #bibliography("references.bib", title: "References", style: "apa") -->
+<!-- ``` -->
+
+
