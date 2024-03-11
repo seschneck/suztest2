@@ -9,7 +9,6 @@ title-slide-attributes:
   data-background-position: left 10% bottom 10%
 format: 
   revealjs:
-    freeze: auto
     scrollable: true
     chalkboard: true
     css: slides.css
