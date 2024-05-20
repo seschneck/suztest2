@@ -29,9 +29,7 @@ key-points:
   - Take away point 1 
   - Take away point 2
 date: last-modified
-bibliography: references.bib
-citation:
-  container-title: Journal of Important Findings 
+bibliographystyle: apa
 number-sections: false 
 editor_options: 
   chunk_output_type: console
@@ -50,50 +48,6 @@ Notice use of curly braces to label a section if you want to later cross-referen
 
 You can use sub-headings in your paper as well
 
-### Symbols and Equations
-
-You can use quarto inline or display math equations as needed.  Quarto provides [details](https://quarto.org/docs/authoring/markdown-basics.html#equations) on the use of these equations.
-
-For example $x$ and $y$ are two variables. And here is an important formula:
-
-$$
-p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
-$$ 
-
-### Tables
-
-Tables are generally created and output from notebooks in the /notebooks folder.  You can then embed these tables in your manuscript.
-
-{{< embed notebooks/tables.qmd#table-1 >}}
-
-
-Alternatively, this is an example of a simple table that is hard-coded using markdown table format.  We don't recommend this for tables built from data. Tables values should come directly from data so they don't need to be typed in and will update if your data change.  However, you may have other uses for simple tables where this method is helpful.
-
-| Name                | Year |
-|---------------------|------|
-| Current             | 2021 |
-| Teneguía            | 1971 |
-| Nambroque           | 1949 |
-| El Charco           | 1712 |
-| Volcán San Antonio  | 1677 |
-| Volcán San Martin   | 1646 |
-| Tajuya near El Paso | 1585 |
-| Montaña Quemada     | 1492 |
-
-: Recent historic eruptions on La Palma {#tbl-history}
-
-
-
-### Figures
-
-Figures are also generally created in separate notebooks and embedded into your manuscript.
-
-{{< embed notebooks/fig1.qmd#fig-1 >}}
-
-
-We can also insert image files directly into our manuscript using images that are saved in the /images folder
-
-![Map of La Palma](images/la-palma-map.png){#fig-map}
 
 
 ### References
@@ -121,14 +75,6 @@ Change number-sections: in YAML to TRUE to fix this (although that causes unwant
 ## Results {#sec-results}
 
 To add results that are not figures or tables, you will need to open the analysis objects you saved from these analyses.  See lm.qmd as an example. Generally you will open csv files that contain tidied results. For example
-```{r}
-library(tidyverse)
-
-coeffs <- read_csv(here::here("notebooks/analysis_objects/coeff_table.csv"),
-                   col_types = cols())
-```
-
-A significant effect of speed was observed ($\beta$ = `r sprintf("%1.1f", coeffs |> filter(term == "speed") |> pull(estimate))`, t = `r sprintf("%1.2f", coeffs |> filter(term == "speed") |> pull(statistic))`, p = `r sprintf("%1.3f", coeffs |> filter(term == "speed") |> pull(p.value))`).
 
 NOTES: 
 
@@ -138,10 +84,6 @@ NOTES:
 
 ## Discussion {#sec-discussion}
 
-## References {.unnumbered}
-
-::: {#refs}
-:::
 
 
 <!-- Note: Ref section still doesn't seem APA style. Typst will in teh future support standalone refs. In the meantime, this works but ONLY in the typst APA output. You also have to comment out the bibliography: line in the YAML for it to work. -->
@@ -151,3 +93,6 @@ NOTES:
 <!-- ``` -->
 
 
+```{=typst} 
+#bibliography("references.bib", title: "References", style: "apa")
+```
