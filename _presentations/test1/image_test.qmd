@@ -43,7 +43,7 @@ d. Both (../../../images/image.png) and (../images/image.png) try to point to th
 2. With rproj loaded:
 
 (Render still gives you qmd/images here:)  
-<!-- ![](../../images/image.png)   Causes API error   -->
+![](../../images/image.png)   Causes API error
 ![](../images/image.png)  (Gives you https://seschneck.quarto.pub/images/image.png)
 
 ![](images/image.png) 
