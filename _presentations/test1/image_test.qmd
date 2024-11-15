@@ -1,5 +1,5 @@
 ---
-title: "Acknowledgements demo"
+title: "Images test"
 author: "John J. Curtin, Ph.D."
 institute: "University of Wisconsin-Madison"
 date: October 25, 2024
@@ -11,7 +11,7 @@ format:
     multiplex: false 
     auto-stretch: false
 title-slide-attributes:
-  data-background-image: https://github.com/jjcurtin/lectures/blob/main/images/smartphone_know_you.png?raw=true
+  data-background-image: ../..images/image.png
   data-background-size: 40%
   data-background-repeat: no
   data-background-position: left 10% bottom 10%
@@ -19,9 +19,35 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Optimize
+## Image tests
+
+1. With no rproj loaded, 
+
+a. With Render, both of these find the image in qmd/images (same for the background!!)
+(actually ano matter how many ../ it still finds this image )
+
+images/image.png:  
+![](images/image.png) https://seschneck.quarto.pub/imagetest/images/image.png
+
+../../images/image.png:   
+![](../../../images/image.png) 
+
+![](../images/image.png) 
+
+b. with publish the 2nd one is an error: ERROR: API Error: 404 - Not Found
+
+c. changing 2nd one to ../../../images/image/png is a broken link but it still publishes. The link tries to point to https://seschneck.quarto.pub/images/image.png
+
+d. Both (../../../images/image.png) and (../images/image.png) try to point to that same link!!
+
+2. With rproj loaded:
+
+(Render still gives you qmd/images here:)
+../../images/image.png:   Causes API error
 
 
-![](images/image.png)
+![](images/image.png) 
 
-## Risk
+## Media Backgrounds {background-image=images/image.png}
+
+Background
