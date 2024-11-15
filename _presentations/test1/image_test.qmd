@@ -1,0 +1,27 @@
+---
+title: "Acknowledgements demo"
+author: "John J. Curtin, Ph.D."
+institute: "University of Wisconsin-Madison"
+date: October 25, 2024
+format: 
+  revealjs:
+    css: presentation.css
+    scrollable: true 
+    slide-number: false 
+    multiplex: false 
+    auto-stretch: false
+title-slide-attributes:
+  data-background-image: https://github.com/jjcurtin/lectures/blob/main/images/smartphone_know_you.png?raw=true
+  data-background-size: 40%
+  data-background-repeat: no
+  data-background-position: left 10% bottom 10%
+editor_options: 
+  chunk_output_type: console
+---
+
+## Optimize
+
+
+![](images/image.png)
+
+## Risk
