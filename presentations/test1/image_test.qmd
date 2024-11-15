@@ -11,7 +11,7 @@ format:
     multiplex: false 
     auto-stretch: false
 title-slide-attributes:
-  data-background-image: ../..images/image.png
+  data-background-image: image.png
   data-background-size: 40%
   data-background-repeat: no
   data-background-position: left 10% bottom 10%
@@ -19,18 +19,31 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Image tests
+## Title image
+image.png shows file next to qmd  
+ /images/image.png doesnt work (no image)  
+ images/image.png shows qmd/images/  
+ ../image.png gives 404 publish error (aka API error) even though there IS an image one folder up  
 
-1. With no rproj loaded, 
+## Image tests{.smaller}
 
-a. With Render, both of these find the image in qmd/images (same for the background!!)
-(actually no matter how many ../ it still finds this image )
+1. With no rproj loaded,  
 
-images/image.png:  
-![](images/image.png) https://seschneck.quarto.pub/imagetest/images/image.png
 
-../../images/image.png:   
-![](../../../images/image.png) 
+a.   
+
+Same directory as qmd:  (this works with publish)  
+![](image.png)  
+
+(sidebar - With Render, both of the below links find the image in qmd/images/ (same for the background!!)  
+(actually no matter how many ../ it still finds this image )  
+
+
+images/image.png (In subfolder under qmd) (this works with publish)      
+![](images/image.png) https://seschneck.quarto.pub/imagetest/images/image.png  
+
+../image.png:  (one directory up)   
+![]("../image.png") 
 
 ![](../images/image.png) 
 
@@ -43,7 +56,7 @@ d. Both (../../../images/image.png) and (../images/image.png) try to point to th
 2. With rproj loaded:
 
 (Render still gives you qmd/images here:)  
-![](../../images/image.png)   Causes API error
+<!-- ![](../../images/image.png)   Causes API error -->
 ![](../images/image.png)  (Gives you https://seschneck.quarto.pub/images/image.png)
 
 ![](images/image.png) 
