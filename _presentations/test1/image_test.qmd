@@ -24,7 +24,7 @@ editor_options:
 1. With no rproj loaded, 
 
 a. With Render, both of these find the image in qmd/images (same for the background!!)
-(actually ano matter how many ../ it still finds this image )
+(actually no matter how many ../ it still finds this image )
 
 images/image.png:  
 ![](images/image.png) https://seschneck.quarto.pub/imagetest/images/image.png
@@ -42,11 +42,15 @@ d. Both (../../../images/image.png) and (../images/image.png) try to point to th
 
 2. With rproj loaded:
 
-(Render still gives you qmd/images here:)
-../../images/image.png:   Causes API error
-
+(Render still gives you qmd/images here:)  
+<!-- ![](../../images/image.png)   Causes API error   -->
+![](../images/image.png)  (Gives you https://seschneck.quarto.pub/images/image.png)
 
 ![](images/image.png) 
+
+![](_presentations/test1/images/image.png) 
+
+(https://seschneck.quarto.pub/imagetest/_presentations/test1/images/image.png) which is not found
 
 ## Media Backgrounds {background-image=images/image.png}
 
