@@ -2,3 +2,7 @@
   quarto-pub:
     - id: 11f7cf3c-71f2-4168-bae5-612b6972294d
       url: 'https://seschneck.quarto.pub/imagetest'
+- source: image_test2.qmd
+  quarto-pub:
+    - id: 7bd0727c-3f78-46a0-beb0-a29312821fef
+      url: 'https://seschneck.quarto.pub/images-test-2'

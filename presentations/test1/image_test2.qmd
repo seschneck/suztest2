@@ -1,7 +1,7 @@
 ---
-title: "Images test"
-author: "John J. Curtin, Ph.D."
-institute: "University of Wisconsin-Madison"
+title: "Images test #2"
+author: "Me"
+institute: "Madison"
 date: October 25, 2024
 format: 
   revealjs:
