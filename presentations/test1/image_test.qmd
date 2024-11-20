@@ -59,11 +59,19 @@ d. Both (../../../images/image.png) and (../images/image.png) try to point to th
 <!-- ![](../../images/image.png)   Causes API error -->
 ![](../images/image.png)  (Gives you https://seschneck.quarto.pub/images/image.png)
 
-![](images/image.png) 
+![](/images/image.png) 
 
-![](_presentations/test1/images/image.png) 
+![](/presentations/image.png) 
 
 (https://seschneck.quarto.pub/imagetest/_presentations/test1/images/image.png) which is not found
+
+
+
+3. With quarto project enabled and rProj off  
+
+No difference than no rproj
+
+
 
 ## Media Backgrounds {background-image=images/image.png}
 
