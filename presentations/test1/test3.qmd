@@ -1,7 +1,7 @@
 ---
-title: "Images test"
-author: "John J. Curtin, Ph.D."
-institute: "University of Wisconsin-Madison"
+title: "Images test #2"
+author: "Me"
+institute: "Madison"
 date: October 25, 2024
 format: 
   revealjs:
@@ -25,20 +25,9 @@ image.png shows file next to qmd
  images/image.png shows qmd/images/  
  ../image.png gives 404 publish error (aka API error) even though there IS an image one folder up  
 
-
-## Image tests2{.smaller}
-
-![](image.png) 
-
-![](images/image.png) 
-
-![](/images/image.png) 
-
-
 ## Image tests{.smaller}
 
 1. With no rproj loaded,  
-![](image.png)  
 
 
 a.   
@@ -67,17 +56,13 @@ images/image.png (In subfolder under qmd) (this works with publish)
 <!-- 2. With rproj loaded: -->
 
 <!-- (Render still gives you qmd/images here:)   -->
-<!-- <!-- ![](../../image.png)   Causes API error  --> 
+<!-- <!-- ![](../../image.png)   Causes API error  --> -->
 <!-- ![](../image.png)  (Gives you https://seschneck.quarto.pub/images/image.png) -->
 
  ![](image.png)  
 
 <!-- ![](/presentations/image.png) Nope -->
-![](image.png) 
-
-<!-- ![](presentations/image.png)  -->
-
-<!-- ![](presentations/test1/image.png)  -->
+<!-- ![](presentations/image.png) -->
 
 (https://seschneck.quarto.pub/imagetest/_presentations/test1/images/image.png) which is not found 
 
