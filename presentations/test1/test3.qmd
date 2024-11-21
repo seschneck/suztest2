@@ -5,7 +5,6 @@ institute: "Madison"
 date: October 25, 2024
 format: 
   revealjs:
-    css: presentation.css
     scrollable: true 
     slide-number: false 
     multiplex: false 
@@ -19,70 +18,37 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Title image
-image.png shows file next to qmd  
- /images/image.png doesnt work (no image)  
- images/image.png shows qmd/images/  
- ../image.png gives 404 publish error (aka API error) even though there IS an image one folder up  
+## Output plot
 
-## Image tests{.smaller}
+This plot, can it be embedded in another doc?
 
-1. With no rproj loaded,  
+```{r}
+#| label: plot1
 
+plot(mtcars$cyl, mtcars$disp)
 
-a.   
-
-Same directory as qmd:  (this works with publish)  
-![](image.png)  
-
-(sidebar - With Render, both of the below links find the image in qmd/images/ (same for the background!!)   
-(actually no matter how many ../ it still finds this image )  
-
-
-images/image.png (In subfolder under qmd) (this works with publish)      
-![](images/image.png) https://seschneck.quarto.pub/imagetest/images/image.png   
-
-../image.png:  (one directory up)   
-<!-- ![](../image.png)  -->
-
-<!-- ![](../image.png)  -->
-
-<!-- b. with publish the 2nd one is an error: ERROR: API Error: 404 - Not Found -->
-
-<!-- c. changing 2nd one to ../../../images/image/png is a broken link but it still publishes. The link tries to point to https://seschneck.quarto.pub/images/image.png -->
-
-<!-- d. Both (../../../image.png) and (../images/image.png) try to point to that same link!! -->
-
-<!-- 2. With rproj loaded: -->
-
-<!-- (Render still gives you qmd/images here:)   -->
-<!-- <!-- ![](../../image.png)   Causes API error  --> -->
-<!-- ![](../image.png)  (Gives you https://seschneck.quarto.pub/images/image.png) -->
-
- ![](image.png)  
-
-<!-- ![](/presentations/image.png) Nope -->
-<!-- ![](presentations/image.png) -->
-
-(https://seschneck.quarto.pub/imagetest/_presentations/test1/images/image.png) which is not found 
+```
 
 
 
-3. With quarto project enabled and rProj off  
+```{r}
+#| label: plot2
 
-No difference than no rproj
-
-
-4. With both rProj and quarto project
-
-Still no difference. Any image above the qmd results in: 
-
-[>] Preparing to publish document  
-ERROR: API Error: 404 - Not Found
+knitr::include_graphics("image.png")
+```
 
 
+```{r}
+#| label: plot3
+
+knitr::include_graphics("../../images/image.png")
+```
 
 
-<!-- ## Media Backgrounds {background-image=images/image.png} -->
 
-<!-- Background -->
+```{r}
+#| label: plot4
+
+knitr::include_graphics("images/image.png")
+```
+

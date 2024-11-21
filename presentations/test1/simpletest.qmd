@@ -1,0 +1,142 @@
+---
+title: "Images test"
+author: "John J. Curtin, Ph.D."
+institute: "University of Wisconsin-Madison"
+date: October 25, 2024
+format: 
+  revealjs:
+    css: presentation.css
+    scrollable: true 
+    slide-number: false 
+    multiplex: false 
+    auto-stretch: false
+    embed-resources: true
+title-slide-attributes:
+  data-background-image: ../../images/image.png
+  data-background-size: 40%
+  data-background-repeat: no
+  data-background-position: left 10% bottom 10%
+editor_options: 
+  chunk_output_type: console
+---
+---
+
+## Image Handling Basics {.smaller}
+
+The best way to handle images in quarto presentations is twofold:
+
+1. Create a quarto project in the root folder by adding a _quarto.yml file. All it needs to contain is:
+
+```
+  project:
+    type: default
+```
+  
+This works with OR without an rProj.
+
+2. Also add `embed-resources: true` in the qmd YAML. If you don't do this, most paths above the qmd give you get a 405 error. The html output file is created, but not able to be published.
+
+3. When you are ready to publish, use the terminal command and specify the presentation you want to render. `quarto publish presentations/test1/simpletest.qmd` is what I'm using while sitting at my project root.
+
+
+I tried numerous other permutations of rProj, quarto project, and yaml commands, but only this combination allowed me to reference images both above and below the level of my qmd. 
+
+NB: This only refers to revealJS presentations and the `default` type quarto project. Additional testing will be needed for other output types and other project types (I discovered, for instance, that project `type:website` behaves far differently)
+  
+
+## Example image paths  {.smaller}
+
+1. Start with a forward slash / to refer to image paths from the root of the project
+
+`![](/image.png)`  
+![](/image.png) (is at root with rProj)  
+`![](/images/image.png)`  
+![](/images/image.png) (inside root/images/)  
+`![](/presentations/image.png)`  
+![](/presentations/image.png) (inside presentations)  
+
+`![](/presentations/test1/image.png)`  
+![](/presentations/test1/image.png)  (inside test1 parallel to the qmd)  
+`![](/presentations/test1/images/image.png)`  
+![](/presentations/test1/images/image.png) (below the qmd)
+
+2. Omit the starting forward slash, to refer to paths starting from the qmd (this only goes down)
+
+These are the same 2 images as the last 2 above, but referenced relative to the qmd rather than the project root:  
+`![](image.png)`  
+![](image.png) (inside test1 parallel to qmd)  
+`![](images/image.png)`  
+![](images/image.png) (below the qmd)
+
+## Other rules
+
+You CANNOT use ../ in the body of the slideset qmd to go up a level. This breaks the publish with a 404  error.
+
+However, you CAN use these in the YAML. In fact, the background image on the title slide, which is specified in the YAML, CANNOT start with a slash, but you may use ../ to get to the project root. Remember that using ../ is defining a path relative to the slideset qmd.
+
+So, `data-background-image: ../../images/image.png` gives you the yellow image inside root/images/ while `data-background-image: /images/image.png` (which works for that image, in the body) will break the publish.
+
+
+
+## Media Backgrounds 1 {background=#43464B background-image=../../images/image.png}
+
+`background-image=../../images/image.png`
+
+Using slide backgrounds, you must always specify the path relative to the qmd. However, like on the title slide, you may now use ../ to go up to a folder above the qmd
+
+## Media Backgrounds 2 {background=#43464B background-image=images/image.png}
+
+`background-image=images/image.png`
+
+This background image is below the qmd
+
+## Media Backgrounds 3 {background=#43464B background-image=/images/image.png}
+
+`background-image=/images/image.png`
+
+This background image will be broken - it can't start with a /
+
+## Graphics inside code chunks {.smaller}
+
+You can use `knitr::include_graphics()` to call image filess inside code chunks. There seems to be no advantage to doing this. In fact there are disadvantages: you can only references images at or below the qmd. Neither ../ to go upwards, nor starting with / to reference from the project root, works in this scenario.
+
+```{r}
+#| label: plot_a
+#| echo: true
+
+# This works:
+
+knitr::include_graphics("images/image.png")
+```
+
+
+```{r}
+#| label: plot_b
+#| echo: true
+
+# These halt the execution:
+# knitr::include_graphics("/images/image.png")
+# knitr::include_graphics("../../images/image.png")
+```
+
+Take note of line 3 in the second chunk, because something strange happens when you use the same syntax in a different file...
+
+## Embedding {.smaller}
+
+You can also embed a generated plot made in another qmd file. In this case, the other file is ALSO a revealJS presentation. BUT somehow, the rules about the image path in `knitr::include_graphics()` don't apply - you can specify the relative path with either ../ or relative to the qmd (you still cannot start it with a slash to specify from the projet root).
+
+I think it's because the other file is being rendered but not published, since it's treated as a dependency. However I haven't been able to confirm that yet.
+
+{{< embed test3.qmd#plot2 echo=true >}}
+
+{{< embed test3.qmd#plot3 echo=true >}}
+
+^^ That is the same code that didn't work in THIS qmd!!
+
+{{< embed test3.qmd#plot4 echo=true >}}
+
+## References
+
+https://github.com/quarto-dev/quarto-cli/discussions/6028
+
+https://github.com/quarto-dev/quarto-r/issues/131
