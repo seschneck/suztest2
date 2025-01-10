@@ -1,0 +1,62 @@
+---
+title: "A demo of a UW-based theme for quarto presentations"
+subtitle: "https://jjcurtin.quarto.pub/revealjs-demonstration-slide-deck/"
+author: "John J. Curtin, Ph.D."
+institute: "University of Wisconsin-Madison"
+date: November 15, 2024
+format: 
+  revealjs:
+    css: presentation.css
+    scrollable: true 
+    slide-number: false 
+    multiplex: false 
+    auto-stretch: false
+title-slide-attributes:
+  data-background-image: title_slide.png
+  data-background-size: cover
+  data-background-repeat: no
+  data-background-position: right 5vw top
+editor_options: 
+  chunk_output_type: console
+---
+
+
+# This is H1
+Some text which is very very very very very very very very very very very very very very very very very very very very long
+
+## This is H2
+ 
+Some text but **this is bold**
+
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
+1. 33
